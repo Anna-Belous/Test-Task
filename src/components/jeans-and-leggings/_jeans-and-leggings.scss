@@ -1,0 +1,47 @@
+.jeans {
+	&-section {
+		width: 100%;
+		outline: none;
+
+		&__wrapper {
+			max-width: 1185px;
+			margin: 90px auto 63px;
+		}
+	}
+
+	&__description {
+		color: #333;
+		font-weight: 300
+	}
+
+	&__slogan {
+		display: inline-block;
+		width: 100%;
+		font-size: 40px;
+	}
+
+	&__text {
+		display: inline-block;
+		width: 100%;
+		font-size: 18px;
+		margin: 20px 0 100px;
+	}
+
+	&__filter {
+		border-style: 1px solid #d9d9d9;
+		background: linear-gradient(0deg, #f4f2ee 0%, #fcfbfa 100%);
+		width: 284px;
+		height: 32px;
+		margin-right: 10px;
+		padding-left: 10px;
+
+		&-container {
+
+		}
+
+		&-option {
+
+		}
+
+	}
+}
