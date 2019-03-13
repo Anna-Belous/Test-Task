@@ -29,7 +29,6 @@ body {
 
 .disabled {
   pointer-events: none;
-  opacity: .8;
 }
 
 .product {
@@ -47,20 +46,26 @@ body {
     background-color: #fff;
     padding-bottom: 30px;
 
-    &:hover {
-      padding: 12px 0 32px 0;
-      position: absolute;
-      top: -43px;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .23);
-      z-index: 2;
+    @media screen and (max-width: 768px) {
+      margin: 15px 0;
+    }
 
-      .product__element-top {
-        display: flex;
-      }
+    @media screen and (min-width: 768px) {
+      &:hover {
+        padding: 12px 0 32px 0;
+        position: absolute;
+        top: -43px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .23);
+        z-index: 2;
 
-     .product__purchase,
-     .product__additional-info {
-        display: block;
+        .product__element-top {
+          display: flex;
+        }
+
+       .product__purchase,
+       .product__additional-info {
+          display: block;
+        }
       }
     }
 
@@ -77,6 +82,24 @@ body {
     &-wrapper {
       position: relative;
       width: 284px;
+
+      @media screen and (max-width: 480px) {
+        width: 300px;
+        margin: 0 auto;
+      }
+
+      @media screen and (min-width: 480px) and (max-width: 1024px) {
+        width: 45%;
+        margin: 0 auto;
+      }
+
+      @media screen and (min-width: 780px) and (max-width: 1024px) {
+        margin: 10px auto;
+      }
+
+      @media screen and (min-width: 1024px) and (max-width: 1650px) {
+        margin: 32px calc(33.3% - 378px);
+      }
 
       @media screen and (min-width: 1650px) {
         &:not(:nth-child(4n)) {
@@ -165,7 +188,7 @@ body {
   }
 
   &__img {
-
+    width: 100%;
   }
 
   &__indicator {
@@ -209,6 +232,11 @@ body {
       margin-bottom: 10px;
       width: 100%;
       word-wrap: break-word;
+
+      @media screen and (min-width: 780px) and (max-width: 1024px) {
+        padding: 0 20px;
+        font-size: 18px;
+      }
     }
   }
 
