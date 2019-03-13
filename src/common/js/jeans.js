@@ -1,21 +1,10 @@
-const common = {
+const jeans = {
 
-	init: function () {
-        this.filterJeans();
+    init: function () {
+        common.renderElements(this.productlist, this.container);
     },
 
-    // setElements: () => {
-    //     fetch('/api/', {
-    //         method: 'GET',
-    //         credentials: "same-origin",  //if products will be render by API
-    //     })
-    //         .then(response => {
-    //             return response.json();
-    //         })
-    //         .then(response => {
-    //             common.renderElements(response.data);
-    //         });
-    // },
+    container: document.querySelector('.product__container--jeans'),
 
     productlist: {
         product1: {
@@ -272,83 +261,6 @@ const common = {
         }
     },
 
-    renderElements: function (data, container) {
-
-        for (let key in data) {
-		  container.innerHTML += this.getElementsTemplate(data[key]);
-		  common.renderSizeButtons(data[key].size);
-		};
-    },
-
-    renderSizeButtons: function (sizeList) {
-    	const buttonsContainers = document.querySelectorAll('.product__size-button-container');
-
-    	[...buttonsContainers].forEach((container) => {
-    		container.innerHTML = "";
-
-            [...sizeList].forEach((size) => {
-	            container.innerHTML +=`<button class="product__size-button value="${size}">${size}</button>`;
-	            container.parentElement.parentElement.classList.add(size);
-	        });
-        })
-    },
-
-	getElementsTemplate: (product) => {
-		return (`<div class="product__element-wrapper">
-					<div class="product__element">
-						<div class="product__element-top">
-							<span class="product__code">${product.product_code}</span>
-							<a class="product__link-individual-page product__link-individual-page--rating
-							product__link" href="${product.individual_page_href}">
-								<div class="product__rating">
-									<div class="product__rating-star-container">
-										<img class="product__rating-star" src= "../../images/common/rating-star--voted.svg">
-										<img class="product__rating-star" src= "../../images/common/rating-star--voted.svg">
-										<img class="product__rating-star" src= "../../images/common/rating-star--voted.svg">
-										<img class="product__rating-star" src= "../../images/common/rating-star--voted.svg">
-										<img class="product__rating-star" src= "../../images/common/rating-star.svg">
-									</div>
-									<span class="product__rating-value">${product.rating}</span>
-								</div>
-							</a>
-						</div>
-						
-						<div class="product__concept ${product.color}">
-							<a class="product__link-individual-page product__link-individual-page--view product__link" href="#">
-								<div class="product__view">
-									<img src="${product.img}" class="product__img">
-									<div class="product__indicator product__indicator--${product.indicator_availability}"></div>
-									<div class="product__indicator product__indicator--${product.indicator_new}">new</div>
-								</div>
-								<div class="product__description">
-									<span class="product__description-text">${product.description}</span>
-									<div class="product__price">
-										 от <span class="product__price-value">${product.price_value}</span>
-										<span class="product__price-valute">${product.price_valute}</span>
-									</div>
-								</div>
-							</a>
-							<div class="product__additional-info">
-									<span class="product__additional-info-price">
-									Вкл. 19% налог, искл.
-										<a class="product__link product__link-individual-page--delivery" href="#"><span class="product__additional-info-price--option">
-											доставку
-										</span></a>
-								</div>
-							<form class="product__purchase">
-								<div class="product__size-button-container">
-								</div>
-
-								<input type='hidden' value = "${product.product_code}">
-
-								<button class="product__purchase-button" value="purchase">Добавить в корзину</button>
-							</form>
-						</div>
-					</div>
-				</div>
-		    `);
-	},
-
     filterJeans: function() {
         const jeansFilters = document.querySelectorAll('.jeans__filter'),
               elementsForFilter = document.querySelectorAll('.product__element-wrapper');
@@ -381,4 +293,4 @@ const common = {
     }
 }
 
-common.init();
+jeans.init();

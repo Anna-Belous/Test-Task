@@ -2,16 +2,30 @@
 	<div class="slider__handlers">
 		<div class="slider__arrow slider__arrow--left"></div>
 
-		<div class="slider__section-description">
-			<h1 class="slider__section-title">Джинсы <br/>леггинсы</h1>
+		<div class="slider__section-description slider__section-description--jeans">
+			<h1 class="slider__section-title slider__section-title">Джинсы <br/>леггинсы</h1>
 			<h2 class="slider__section-subtitle">
 				найдите идеальный силует!
+			</h2>
+		</div>
+
+		<div class="slider__section-description slider__section-description--panty hidden">
+			<h1 class="slider__section-title slider__section-title--panty">Колготки</h1>
+			<h2 class="slider__section-subtitle slider__section-subtitle--panty">
+				секрет стройных ножек!
 			</h2>
 		</div>
 
 		<div class="slider__arrow slider__arrow--right"></div>
 
 		<div class="slider__navigation">
+			<label for="jeans" class="slider__navigation-element slider__navigation-element--active">
+				<span class="slider__navigation-element-icon
+				slider__navigation-element-icon--jeans"></span>
+				<span class="slider__navigation-element-name">
+					Джинсы / леггинсы
+				</span>
+			</label>
 			<label for="panty" class="slider__navigation-element">
 				<span class="slider__navigation-element-icon slider__navigation-element-icon--panty"></span>
 				<span class="slider__navigation-element-name">
@@ -32,26 +46,12 @@
 					Нижнее белье
 				</span>
 			</label>
-			<label for="jeans" class="slider__navigation-element slider__navigation-element--active">
-				<span class="slider__navigation-element-icon
-				slider__navigation-element-icon--jeans"></span>
-				<span class="slider__navigation-element-name">
-					Джинсы / леггинсы
-				</span>
-			</label>
 		</div>
 	</div>
-	
-
-	<input type="checkbox" class="hidden" id="panty">
-	<input type="checkbox" class="hidden" id="socks">
-	<input type="checkbox" class="hidden" id="bra">
-	<input type="checkbox" class="hidden" id="jeans">
 
 	<div class="slider__slide-container">
 		<div class="slider__slide slider__slide--jeans"></div>
 		<div class="slider__slide slider__slide--panty"></div>
 	</div>
-	
 
 </div>

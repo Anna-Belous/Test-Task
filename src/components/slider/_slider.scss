@@ -33,12 +33,19 @@
 
 	 	@media screen and (max-width: 780px) {
 	      padding: 0;
+	      height: 100%;
 	    }
 
 	    @media screen and (min-width: 780px) and (max-width: 1024px) {
 	      padding: 200px 35px;
 	    }
-    }
+
+	    @media screen and (min-width: 2150px) {
+			max-width: 1185px;
+		    margin: 0 auto 0;
+		    left: calc(50% - 592px);
+	    }
+	}
 
     &__slide {
     	height: 100%;
@@ -54,7 +61,6 @@
 		}
 
     	&--panty {
-    		//display: none;
 			background: #e8e6ec url("../images/panty-hoses/panty-background.png") no-repeat;
 			background-position: center;
     		background-size: cover;
@@ -161,6 +167,17 @@
 		    @media screen and (max-width: 375px) {
 		      margin-top: 50px;
 		    }
+
+		    &--panty {
+				@media screen and (max-width: 375px) {
+			      margin-top: 100px;
+			    }
+
+			    @media screen and (min-width: 780px) and (max-width: 1024px) {
+			      font-size: 105px;
+			      margin-left: 25%;
+			    }
+			}
 		}
 
 		&-subtitle {
@@ -191,6 +208,16 @@
 		    @media screen and (min-width: 780px) and (max-width: 1024px) {
 		      margin: 10px 0 0 55px;
 		    }
+
+		    &--panty {
+				@media screen and (min-width: 780px) and (max-width: 1024px) {
+			        margin: 10px 0 0 225px;
+			    }
+
+				@media screen and (max-width: 768px) {
+			    	color: #2e2e2e;
+			    }
+			}
 		}
 	}
 
@@ -269,8 +296,8 @@
 		    		left: 0;
 		    		height: 100%;
 		    		width: 100%;
-		    		background-color: #fff;
-		    		opacity: .2;
+		    		background: radial-gradient(#666464, #fff);
+		    		opacity: .6;;
 		    		pointer-events: none;
 		    	}
 		    }

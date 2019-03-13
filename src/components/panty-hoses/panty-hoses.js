@@ -1,3 +1,7 @@
-var h = window.screen.availHeight,
-	w = window.screen.availWidth;
-console.log(h,w);
+const panty = {
+	init: function () {
+        console.log('panty');
+    },
+}
+
+panty.init();

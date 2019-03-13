@@ -2,6 +2,7 @@ let slider = {
 
     init: function () {
         this.setActiveNav(this.sliderContainer, this.navElements);
+        this.sliderTitleHandler();
         this.arrowsHandler(this.sliderContainer);
         this.getCurrentSlide();
     },
@@ -30,8 +31,24 @@ let slider = {
                     offsetNumber = (previousSectionNumber - currentSectionNumber)*slide.offsetWidth;
 
                     container.scrollLeft += offsetNumber;
+            });
+        });
+    },
 
-                console.log(previousSectionNumber, currentSectionNumber);
+    sliderTitleHandler: function () {
+        const containerList = document.querySelectorAll('.slider__section-description'),
+              toggleList = document.querySelectorAll('.slider-toggle');
+
+        [...toggleList].forEach((element) => {
+            element.addEventListener('change', () => {
+
+                [...containerList].forEach((container) => {
+                    container.classList.add('hidden');
+                });
+
+                if(element.checked) {
+                    document.querySelector('.slider__section-description--' + element.id).classList.remove('hidden');
+                };
             });
         });
     },
@@ -40,11 +57,23 @@ let slider = {
         let slide = slider.getCurrentSlide();
 
         document.querySelector('.slider__arrow--right').addEventListener('click',()=>{
-            
+            let activeTab = document.querySelector('.slider__navigation-element--active');
+
+            if(!activeTab.nextElementSibling.classList.contains("disabled")) {
+                console.log(!activeTab.nextElementSibling.classList.contains("disabled"));
+                activeTab.nextElementSibling.click();
+            }
+
             container.scrollLeft += slide.offsetWidth;
         });
 
         document.querySelector('.slider__arrow--left').addEventListener('click',()=>{
+            let activeTab = document.querySelector('.slider__navigation-element--active');
+
+            if(!activeTab.previousElementSibling.classList.contains("disabled")) {
+                console.log(!activeTab.previousElementSibling.classList.contains("disabled"));
+                activeTab.previousElementSibling.click();
+            }
             
             container.scrollLeft -= slide.offsetWidth;
         });
