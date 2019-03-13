@@ -1,45 +1,98 @@
-(function slider() {
-    let frame = 0;
+let slider = {
 
-    const slides = ['../images/2.jpg', '../images/3.jpg', '../images/4.jpg', '../images/5.jpg', '../images/6.jpg'];
-    const container = document.getElementById("scr");
-    const previous = document.querySelector('.portfolio__arrow--left');
-    const right = document.querySelector('.portfolio__arrow--right');
-    const quantity = document.querySelector('.portfolio__counter--all');
-    const currentSlide = document.querySelector('.portfolio__counter--current');
+    init: function () {
+        this.setActiveNav(this.sliderContainer, this.navElements);
+        this.arrowsHandler(this.sliderContainer);
+        this.getCurrentSlide();
+    },
 
-    previous.addEventListener("click", function () {
-        frame--;
-        if (frame < 0) {
-            frame = slides.length - 1;
+    navElements: document.querySelectorAll(".slider__navigation-element"),
+    sliderContainer:document.querySelector('.slider__slide-container'),
+    slideList:document.querySelector('.slider__slide'),
+
+    setActiveNav: function (container, list) {
+        let slide = slider.getCurrentSlide();
+
+        [...list].forEach((element) => {
+            element.addEventListener('click', () => {
+                let previousSectionName = slider.excludeSectionName(slider.getCurrentSlide(), 'slider__slide--'),
+                    previousSectionNumber = slider.idToNumber(previousSectionName);
+                
+                [...list].forEach((element) => {
+                    element.classList.remove("slider__navigation-element--active");
+                });
+
+                element.classList.add("slider__navigation-element--active");
+
+                slide = slider.getCurrentSlide();
+                let currentSectionName = slider.excludeSectionName(slider.getCurrentSlide(), 'slider__slide--'),
+                    currentSectionNumber = slider.idToNumber(currentSectionName), // step is needed to repeat, because current slide is changed after adding active class
+                    offsetNumber = (previousSectionNumber - currentSectionNumber)*slide.offsetWidth;
+
+                    container.scrollLeft += offsetNumber;
+
+                console.log(previousSectionNumber, currentSectionNumber);
+            });
+        });
+    },
+
+    arrowsHandler: function (container) {
+        let slide = slider.getCurrentSlide();
+
+        document.querySelector('.slider__arrow--right').addEventListener('click',()=>{
+            
+            container.scrollLeft += slide.offsetWidth;
+        });
+
+        document.querySelector('.slider__arrow--left').addEventListener('click',()=>{
+            
+            container.scrollLeft -= slide.offsetWidth;
+        });
+    },
+
+    getCurrentSlide: function () {
+        let activeTab = document.querySelector('.slider__navigation-element--active'),
+            slideName = slider.excludeSectionName(activeTab.querySelector('.slider__navigation-element-icon'), 'slider__navigation-element-icon--'),
+            slide = document.querySelector('.slider__slide--' + slideName);
+
+        return slide;
+    },
+
+    excludeSectionName: function (element, className) {
+       return element.classList[1].replace(className, '');
+    },
+
+    idToNumber: function(id) {
+        let number;
+        switch(id){
+            case "panty":
+                number = 0;
+            break;
+            case "socks":
+                number = 1;
+            break;
+            case "bra":
+                number = 2;
+            break;
+            case "jeans":
+                number = 3;
+            break;
         }
+        return number;
+    },
 
-        setBackgroundImage(slides[frame]);
-        setCurrentSlide(frame + 1)
-    });
+    resetPosition: function (element) {
+        element.classList.remove('slider__slide-move-right');
+        element.classList.remove('slider__slide-move-left');
+    },
 
-    right.addEventListener("click", function () {
-        frame++;
-        if (frame === slides.length) {
-            frame = 0;
-        }
+    findElement: function (element, className) {
+        return element.parentNode.parentNode.classList.contains(className);
+    },
 
-        setBackgroundImage(slides[frame]);
-        setCurrentSlide(frame + 1)
-    });
-
-    setBackgroundImage(slides[0]);
-    quantity.innerHTML = slides.length;
-    setCurrentSlide(1);
-
-
-    function setBackgroundImage(imgUrl) {
-        container.style.backgroundImage = `url(${imgUrl})`;
+    containClass: function (element ='document', className) {
+        return element.querySelector(className);
     }
+};
 
-    function setCurrentSlide(number) {
-        currentSlide.innerHTML = number;
-    }
-
-})();
-
+slider.init();

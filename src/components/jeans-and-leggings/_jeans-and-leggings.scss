@@ -6,6 +6,31 @@
 		&__wrapper {
 			max-width: 1185px;
 			margin: 90px auto 63px;
+
+			@media screen and (max-width: 480px) {
+		     	width: 90%;
+		     	margin: 50px auto;
+		    }
+		    
+		    @media screen and (min-width: 480px) and (max-width: 780px) {
+		     	width: 90%;
+		     	margin: 50px auto;
+		    }
+
+		    @media screen and (min-width: 780px) and (max-width: 1580px) {
+		     	width: 80%;
+		     	margin: 90px auto 63px;
+		    }
+
+		    @media screen and (min-width: 1580px) and (max-width: 1650px){
+		    	width: 80%;
+		     	margin: 90px auto 63px;
+		    }
+
+		    @media screen and (min-width: 1650px) {
+		     	max-width: 1185px;
+				margin: 90px auto 63px;
+		    }
 		}
 	}
 
@@ -32,16 +57,11 @@
 		background: linear-gradient(0deg, #f4f2ee 0%, #fcfbfa 100%);
 		width: 284px;
 		height: 32px;
-		margin-right: 10px;
+		margin-right: 0 10px 32px 0;
 		padding-left: 10px;
-
-		&-container {
-
-		}
 
 		&-option {
 
 		}
-
 	}
 }

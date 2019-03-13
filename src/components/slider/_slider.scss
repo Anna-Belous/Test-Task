@@ -1,0 +1,279 @@
+.slider {
+	position: relative;
+ 	height: 700px;
+ 	width: 100%;
+    box-sizing: content-box;
+
+ 	@media screen and (max-width: 375px) {
+     	height: 200px;
+     	padding: 0;
+        background-size: auto 100%;
+        background-position: top right;
+     	margin-bottom: 140px;
+    }
+
+ 	@media screen and (min-width: 375px) and (max-width: 768px) {
+      height: 300px;
+      padding: 0;
+      background-size: auto 100%;
+      background-position: top right;
+      margin-bottom: 140px;
+    }
+
+    &__handlers {
+    	//display: none;
+    	position: absolute;
+    	width: 100%;
+    	z-index: 10;
+    	top: 0;
+    	left: 0;
+    	padding: 200px 130px;
+    }
+
+    &__slide {
+    	height: 100%;
+    	width: 100vw;
+    	flex-shrink: 0;
+
+		&-container {
+			position: relative;
+			height: 100%;
+			width: 100vw;
+			display: flex;
+			overflow-x: scroll; 
+			border: 1px solid red;
+		}
+
+		// &-move {
+		// 	&-right {
+		// 		left: 100vw;
+		// 		transition: left 1s ease-in-out;
+		// 	}
+
+		// 	&-left {
+		// 		left: -100vw;
+		// 		transition: left 1s ease-in-out;
+		// 	}
+		// }
+
+    	&--panty {
+    		//display: none;
+			background: #e8e6ec url("../images/panty-hoses/panty-background.png") no-repeat;
+			background-position: center;
+    		background-size: cover;
+
+			@media screen and (max-width: 375px) {
+		        background-size: auto 100%;
+		        background-position: top right;
+		    }
+
+		 	@media screen and (min-width: 375px) and (max-width: 768px) {
+		      background-size: auto 100%;
+		      background-position: top right;
+		    }
+    	}
+
+    	&--jeans {
+    		background: #e8e6ec url("../images/jeans-and-leggings/jeans-background.png") no-repeat;
+    		background-position: center;
+    		background-size: cover;
+
+			@media screen and (max-width: 375px) {
+		        background-size: auto 100%;
+		        background-position: top right;
+		    }
+
+		 	@media screen and (min-width: 375px) and (max-width: 768px) {
+		      background-size: auto 100%;
+		      background-position: top right;
+		    }
+    	}
+    }
+
+	&__arrow {
+		width: 49px;
+		height: 91px;
+		background: transparent url("../images/common/slider-arrow.svg") no-repeat center;
+		position: absolute;
+		top: calc(50% - 45px);
+
+		&--right {
+			right: 130px;
+			transform: rotate(180deg);
+		}
+
+		@media screen and (max-width: 768px) {
+	      display: none;
+	    }
+	}
+
+	&__section {
+		&-description {
+			color: #2e2e2e;
+			position: relative;
+			height: 100%;
+			width: 700px;
+			margin: 0 auto;
+
+			@media screen and (max-width: 768px) {
+		      width: 100%;
+		    }
+		}
+
+		&-title {
+			font-size: 145px;
+			line-height: .9;
+			margin: 0;
+
+			@media screen and (max-width: 768px) {
+			  color: #000;
+		      font-size: 50px;
+		      display: inline-block;
+		      width: 100%;
+		      text-align: center;
+			  margin-top: 100px;
+			  text-shadow: #2e2e2e .1px .1px .5px, #2e2e2e -.1px -.1px .5px, 
+                #2e2e2e -.1px .1px .5px, #2e2e2e .1px -.1px .5px;
+		    }
+
+		    @media screen and (min-width: 480px) and (max-width: 768px) {
+		      font-size: 60px;
+		      text-align: left;
+		      margin-left: 10%;
+		      color: #2e2e2e;
+		      text-shadow: none;
+		    }
+		}
+
+		&-subtitle {
+			font-size: 33px;
+			display: inline-block;
+			text-align: center;
+			margin: 0; 
+			line-height: 1;
+			font-weight: 300;
+			margin: 10px 0 0 110px;
+
+			@media screen and (max-width: 768px) {
+		      font-size: 15px;
+		      font-weight: 400;
+		      color: #b3b3b3;
+		      margin: 10px 0 0 0;
+		      width: 100%;
+		      text-align: center;
+		    }
+
+		    @media screen and (min-width: 480px) and (max-width: 768px) {
+		      font-size: 16px;
+		      text-align: left;
+		      margin-left: 10%;
+		      color: #2e2e2e;
+		    }
+		}
+	}
+
+	&__navigation {
+		position: absolute;
+		left: 0;
+		top: 120px;
+		height: 460px;
+		width: 100px;
+		margin: auto 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		@media screen and (max-width: 375px) {
+	      flex-direction: row;
+	      top: 200px;
+	      left: 0;
+	      height: 100px;
+		  width: 100%;
+	    }
+
+		@media screen and (min-width: 375px) and (max-width: 768px) {
+	      flex-direction: row;
+	      top: 300px;
+	      left: 0;
+	      height: 100px;
+		  width: 100%;
+	    }
+
+		&-element {
+			background-color: #000;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			padding: 10px 15px 0;
+
+			@media screen and (max-width: 768px) {
+		      width: 25%;
+		    }
+
+		    @media screen and (min-width: 480px) and (max-width: 768px) {
+		    	&:not(:last-of-type) {
+		    		border-right: 1px solid #c5c3c8;
+		    	}
+		    }
+
+			&:hover {
+		    	cursor: pointer;
+		    	background: radial-gradient(#2f3436, #000);
+		    }
+
+		    &:first-child {
+		       padding: 10px 15px 5px;
+		    }
+
+		    &:last-of-type {
+		       padding: 0 15px;
+		    }
+
+		    &--active {
+		    	background: radial-gradient(#2f3436, #000);
+		    }
+
+			&-name {
+				color: #fff;
+				font-size: 14px;
+				font-weight: 400;
+				text-align: center;
+
+				@media screen and (max-width: 768px) {
+			      font-size: 12px;
+			    }
+			}
+
+			&-icon {
+				display: inline-block;
+				align-self: center;
+
+				&--panty {
+					width: 23px;
+					height: 43px;
+					background: transparent url("../images/common/icon-panty.svg") no-repeat center;
+				}
+
+				&--socks {
+					width: 31px;
+					height: 34px;
+					background: transparent url("../images/common/icon-socks.svg") no-repeat center;
+				}
+
+				&--underwear {
+					width: 30px;
+					height: 24px;
+					background: transparent url("../images/common/icon-bra.svg") no-repeat center;
+				}
+
+				&--jeans {
+					width: 17px;
+					height: 46px;
+					background: transparent url("../images/common/icon-jeans.svg") no-repeat center;
+				}
+			}
+		}
+	}	
+}

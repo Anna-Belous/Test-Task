@@ -27,12 +27,20 @@ body {
   display: none;
 }
 
+.disabled {
+  pointer-events: none;
+  opacity: .8;
+}
 
 .product {
   &__container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
   }
 
   &__element {
@@ -70,12 +78,14 @@ body {
       position: relative;
       width: 284px;
 
-      &:not(:nth-child(4n)) {
-        margin: 32px 15px 0 0;
-      }
+      @media screen and (min-width: 1650px) {
+        &:not(:nth-child(4n)) {
+          margin: 32px 15px 0 0;
+        }
 
-      &:nth-child(4n) {
-        margin: 32px 0 0 0;
+        &:nth-child(4n) {
+          margin: 32px 0 0 0;
+        }
       }
     }
   }
@@ -256,7 +266,7 @@ body {
       margin: 15px auto 0;
 
       &:hover {
-        cursor: poiner;
+        cursor: pointer;
         opacity: .9;
       }
     }
