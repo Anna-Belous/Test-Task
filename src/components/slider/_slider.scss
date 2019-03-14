@@ -58,6 +58,8 @@
 			width: 100vw;
 			display: flex;
 			overflow-x: scroll;
+			scroll-behavior: smooth;
+			transition: all 1s ease-in-out;
 		}
 
     	&--panty {
@@ -240,15 +242,15 @@
 	    }
 
 		@media screen and (max-width: 375px) {
-	      top: 200px;
+	    	top: 185px;
 	    }
 
 		@media screen and (min-width: 375px) and (max-width: 780px) {
-	      top: 300px;
+	    	top: 285px;
 	    }
 
 	    @media screen and (min-width: 780px) and (max-width: 1024px) {
-	      top: 500px;
+	        top: 485px;
 	    }
 
 		&-element {
