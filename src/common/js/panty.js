@@ -194,20 +194,6 @@ const panty = {
             size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
-        product3: {
-            product_code: 08035068,
-            individual_page_href: '#',
-            rating: 5,
-            img: '../../images/panty-hoses/panty-baby-11.png',
-            price_value: '00.00',
-            price_valute: '$',
-            indicator_availability: 'green',
-            indicator_new: null,
-            info_availability: '',
-            description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['s', 'm', 'l', 'xl'],
-            color: 'multiple'
-        },
         product4: {
             product_code: 08035358,
             individual_page_href: '#',
