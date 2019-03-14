@@ -68,6 +68,14 @@
 	     	margin: 20px 0 60px;
 	     	font-size: 20px;
 	    }
+
+	    &--children {
+	    	margin: 20px 0 26px;
+
+	    	@media screen and (min-width: 480px) and (max-width: 780px) {
+	     		margin: 20px 0 40px;
+		    }
+	    }
 	}
 
 	&__product-name {

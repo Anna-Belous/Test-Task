@@ -21,7 +21,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет серый',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'gray'
         },
         product2: {
@@ -35,7 +35,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет черный',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'black'
         },
         product3: {
@@ -49,7 +49,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет телесный',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: ''
         },
         product4: {
@@ -63,7 +63,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет бронз',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'bronze'
         },
         product5: {
@@ -76,7 +76,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет серый',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'grey'
         },
         product6: {
@@ -90,7 +90,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет черный',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'black'
         },
         product7: {
@@ -104,7 +104,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет белый',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'white'
         },
         product8: {
@@ -118,7 +118,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Колготки, Conte Elegant 20 Den, цвет бронз',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'bronze'
         },
         product9: {
@@ -132,7 +132,7 @@ const panty = {
             indicator_new: 'new',
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'bronze'
         },
         product10: {
@@ -146,7 +146,7 @@ const panty = {
             indicator_new: 'new',
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'bronze'
         },
         product11: {
@@ -160,7 +160,7 @@ const panty = {
             indicator_new: 'new',
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'bronze'
         }
     },
@@ -177,7 +177,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product2: {
@@ -191,7 +191,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product3: {
@@ -205,7 +205,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product4: {
@@ -219,7 +219,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product5: {
@@ -233,7 +233,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product6: {
@@ -247,7 +247,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product7: {
@@ -261,7 +261,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product8: {
@@ -275,7 +275,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product9: {
@@ -289,7 +289,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product10: {
@@ -303,7 +303,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         },
         product11: {
@@ -317,7 +317,7 @@ const panty = {
             indicator_new: null,
             info_availability: '',
             description: 'Lorem ispum dolor sit amet, consectetur adipiscing elit',
-            size: ['2', '3', '4'],
+            size: ['s', 'm', 'l', 'xl'],
             color: 'multiple'
         }
     }

@@ -2,6 +2,7 @@ const jeans = {
 
     init: function () {
         common.renderElements(this.productlist, this.container);
+        this.filterJeans();
     },
 
     container: document.querySelector('.product__container--jeans'),
@@ -267,7 +268,7 @@ const jeans = {
 
         [...jeansFilters].forEach((filter) => {
             filter.addEventListener("change", function() {
-                common.filterHandler(filter, elementsForFilter);
+                jeans.filterHandler(filter, elementsForFilter);
             });
         });
     },
@@ -276,7 +277,7 @@ const jeans = {
         [...elements].forEach((element) => {
             let identical;
 
-            common.resetVisibility(element);
+            jeans.resetVisibility(element);
 
             if(filter.value != 'all') {
                 identical = element.querySelector('.product__concept').classList.contains(filter.value);
